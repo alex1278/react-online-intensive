@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 
 // Instruments
-import avatar from 'theme/assets/lisa';
+import avatar from 'theme/assets/ira';
 
 // Components
 import Catcher from 'components/Catcher';
@@ -12,8 +12,8 @@ import { Provider } from 'components/HOC/withProfile';
 
 const options = {
     avatar,
-    currentUserFirstName: 'Lisa',
-    currentUserLastName: 'Simpson',
+    currentUserFirstName: 'Ирина',
+    currentUserLastName: 'Комаренець',
 }
 
 @hot(module)
