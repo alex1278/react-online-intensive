@@ -15,6 +15,7 @@ import Composer from 'components/Composer';
 import Post from 'components/Post';
 import Postman from 'components/Postman';
 import Spinner from 'components/Spinner';
+import Counter from 'components/Counter';
 import { api, TOKEN, GROUP_ID } from 'config/api';
 
 // Instruments
@@ -230,6 +231,7 @@ export default class Feed extends Component {
                     }}>
                     <Postman />
                 </Transition>
+                <Counter count={postsJSX.length}/>
                 <TransitionGroup>{ postsJSX }</TransitionGroup>
             </section>
         );
