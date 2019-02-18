@@ -1,6 +1,6 @@
 // Core
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { func, string } from 'prop-types';
 
 // Instruments
 import Styles from './styles.m.css';
@@ -8,9 +8,11 @@ import Styles from './styles.m.css';
 // Components
 import { withProfile } from 'components/HOC/withProfile';
 
-class Composer extends Component {
+export class Composer extends Component {
     static propTypes = {
-        _createPost: PropTypes.func.isRequired
+        _createPost:          func.isRequired,
+        avatar:               string.isRequired,
+        currentUserFirstName: string.isRequired,
     }
 
     state = {
@@ -28,7 +30,7 @@ class Composer extends Component {
         this._submitComment();
     }
 
-    _submitComment = (event) => {
+    _submitComment = () => {
         const { comment } = this.state;
 
         if (!comment) {
