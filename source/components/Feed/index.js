@@ -10,7 +10,6 @@ import { fromTo } from 'gsap';
 // Components
 import { withProfile } from 'components/HOC/withProfile';
 import Catcher from 'components/Catcher';
-import StatusBar from 'components/StatusBar';
 import Composer from 'components/Composer';
 import Post from 'components/Post';
 import Postman from 'components/Postman';
@@ -213,7 +212,6 @@ export default class Feed extends Component {
         return (
             <section className = { Styles.feed } >
                 <Spinner isSpinning = { isPostfetching } />
-                <StatusBar />
                 <Transition
                     appear
                     in
